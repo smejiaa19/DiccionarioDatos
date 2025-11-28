@@ -1,3 +1,6 @@
+        h1{
+                text-align: center;
+        }
 
         body { font-family: Arial, sans-serif; margin: 20px; background: #f8f9fa; }
         .documentation { background: white; border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,0.1); }
@@ -24,3 +27,7 @@
         .badge-not-null { background: #e0f7e9; color: #2e0e36; }
         .alert { padding: 15px; border-radius: 8px; margin-bottom: 20px; }
         .alert-info { background: #e3eafc; border: 1px solid #b8daff; color: #2e0e36; }
+
+        body{
+                background-color: #FFF7E6;
+        }
