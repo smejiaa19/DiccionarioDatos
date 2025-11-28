@@ -11,24 +11,24 @@
         <div class="doc-header">
             <h2 class="sql-doc-generator-h2">📋 Database Documentation</h2>
             <h3 class="sql-doc-generator-h3">ECommerceDB</h3>
-            <p class="sql-doc-generator-p">Generated on November 26, 2025 at 09:23 AM</p> 
+            <p class="sql-doc-generator-p">Created on November 26, 2025</p> 
             <div class="creator-info">
-                Created by <a href="https://www.hakoit.com" target="_blank">HakoIT</a>
+                Created by <a href="https://www.hakoit.com" target="_blank">GAS Team</a>
             </div>
         </div>
         
         <div class="doc-content">
             <div class="stats-grid">
                 <div class="stat-card">
-                    <span class="stat-number">3</span>
+                    <span class="stat-number">7</span>
                     <div class="stat-label">Tables</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">20</span>
+                    <span class="stat-number">30</span>
                     <div class="stat-label">Total Columns</div>
                 </div>
                 <div class="stat-card">
-                    <span class="stat-number">1</span>
+                    <span class="stat-number">6</span>
                     <div class="stat-label">Relations</div>
                 </div>
             </div>
@@ -167,7 +167,7 @@
                 </div>
                 
                 <div class="table-info-body">
-                    <p class="sql-doc-generator-p"><strong>Columns:</strong> 9</p> 
+                    <p class="sql-doc-generator-p"><strong>Columns:</strong> 3</p> 
                     
                     
                     <table class="columns-table">
@@ -321,7 +321,7 @@
                 <div class="table-info-header">
                     <span class="sql-doc-generator-span">Paises</span>
                     <div>
-                        <span class="badge badge-primary">PaisId</span>
+                        <span class="badge badge-primary">PK:PaisId</span>
                     </div>
                 </div>
 
@@ -514,9 +514,224 @@
                 </div>
             </div>
         </div>
-    
-        <div class="alert alert-info">
-            <strong>💡 Tip:</strong> <span class="sql-doc-generator-p">This documentation is automatically generated from your CREATE TABLE scripts. For more comprehensive documentation including procedures, views and triggers, consider our premium version.</span>
+        
+        <div class="table-section">
+            <h3 class="sql-doc-generator-h3">🗃️ Table: Orden</h3>
+
+            <div class="table-info">
+                <div class="table-info-header">
+                    <span class="sql-doc-generator-span">Orden</span>
+                    <div>
+                        <span class="badge badge-primary">PK:OrdenId</span>
+                    </div>
+                </div>
+                
+                <div class="table-info-body">
+                    <p class="sql-doc-generator-p"><strong>Columns:</strong> 5</p>
+                    <p class="sql-doc-generator-p"><strong>Relations:</strong> 1</p>
+
+                    <table class="columns-table">
+                        <thead>
+                            <tr>
+                                <th class="sql-doc-generator-th">Column</th>
+                                <th class="sql-doc-generator-th">Data Type</th>
+                                <th class="sql-doc-generator-th">Null</th>
+                                <th class="sql-doc-generator-th">Key</th>
+                                <th class="sql-doc-generator-th">Default Value</th>
+                                <th class="sql-doc-generator-th">Description</th>
+                                <th class="sql-doc-generator-th">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>OrdenId</strong></td>
+                                <td class="sql-doc-generator-td"><code>INT IDENTITY(1,1)</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td"><span class="badge badge-primary">PK</span></td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Identificador unico de orden</td>
+                                <td class="sql-doc-generator-td">0012</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>ClienteId</strong></td>
+                                <td class="sql-doc-generator-td"><code>INT</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td"><span class="badge badge-primary">FK</span></td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Identificador unico de cliente</td>
+                                <td class="sql-doc-generator-td">0019</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>DireccionEnvio</strong></td>
+                                <td class="sql-doc-generator-td"><code>VARCHAR(150)</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Direccion a la que se le envia al usuario</td>
+                                <td class="sql-doc-generator-td">KM12.5 Carretera Masaya</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>EstadoOrden</strong></td>
+                                <td class="sql-doc-generator-td"><code>VARCHAR(15)</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        YES</span>
+                                </td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Estado de la orden del usuario</td>
+                                <td class="sql-doc-generator-td">Enviado</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>FechaOrden</strong></td>
+                                <td class="sql-doc-generator-td"><code>DATETIME(0)</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Fecha y hora en la que se hizo la orden del usuario</td>
+                                <td class="sql-doc-generator-td">19/11/2006 10:22</td>
+                            </tr>
+
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 20px;">
+                        <h4 class="sql-doc-generator-h4">🔗 Relations</h4>
+                        <ul style="margin-left: 20px;">
+                            <li class="sql-doc-generator-li"><strong>ClienteId</strong> → <strong>Cliente.ClienteId</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="table-section">
+            <h3 class="sql-doc-generator-h3">🗃️ Tables: DetalleOrden</h3>
+
+            <div class="table-info">
+                <div class="table-info-header">
+                    <span class="sql-doc-generator-span">DetalleOrden</span>
+                    <div>
+                        <span class="badge badge-primary">PK:DetalleOrdenId</span>
+                    </div>
+                </div>
+
+                <div class="table-info-body">
+                    <p class="sql-doc-generator-p"><strong>Columns:</strong> 5</p>
+                    <p class="sql-doc-generator-p"><strong>Relations:</strong> 2</p>
+
+                    <table class="columns-table">
+                        <thead>
+                            <tr>
+                                <th class="sql-doc-generator-th">Column</th>
+                                <th class="sql-doc-generator-th">Data Type</th>
+                                <th class="sql-doc-generator-th">Null</th>
+                                <th class="sql-doc-generator-th">Key</th>
+                                <th class="sql-doc-generator-th">Default Value</th>
+                                <th class="sql-doc-generator-th">Description</th>
+                                <th class="sql-doc-generator-th">Example</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>DetalleOrdenId</strong></td>
+                                <td class="sql-doc-generator-td"><code>INT IDENTITY(1,1)</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <spand class="badge badge-nullable">
+                                        NO
+                                    </spand>
+                                </td>
+                                <td class="sql-doc-generator-td"><span class="badge badge-primary">PK</span></td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Identificador Unico de DetalleOrden</td>
+                                <td class="sql-doc-generator-td">1001</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>OrdenId</strong></td>
+                                <td class="sql-doc-generator-td"><code>INT</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td"><span class="badge badge-primary">FK</span></td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Identificador unico de orden (llave foranea)</td>
+                                <td class="sql-doc-generator-td">0012</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>ProductoId</strong></td>
+                                <td class="sql-doc-generator-td"><code>INT</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td"><span class="badge badge-primary">FK</span></td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Identificador unico de producto (llave foranea)</td>
+                                <td class="sql-doc-generator-td">019</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>Cantidad</strong></td>
+                                <td class="sql-doc-generator-td"><code>INT</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Cantidad de productos que hay en una orden</td>
+                                <td class="sql-doc-generator">15</td>
+                            </tr>
+
+                            <tr>
+                                <td class="sql-doc-generator-td"><strong>PrecioUnitario</strong></td>
+                                <td class="sql-doc-generator-td"><code>NUMERIC(6,2)</code></td>
+                                <td class="sql-doc-generator-td">
+                                    <span class="badge badge-nullable">
+                                        NO
+                                    </span>
+                                </td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">-</td>
+                                <td class="sql-doc-generator-td">Precio Unitario de cada producto</td>
+                                <td class="sql-doc-generator-td">12.9</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <div style="margin-top: 20px;">
+                        <h4 class="sql-doc-generator-h4">🔗 Relations</h4>
+                        <ul style="margin-left: 20px;">
+                            <li class="sql-doc-generator-li"><strong>OrdenId</strong> → <strong>Orden.OrdenId</strong></li>
+                            <li class="sql-doc-generator-li"><strong>ProductoId</strong> → <strong>Producto.ProductoId</strong></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     
